@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  .technique {
+    margin: 10px;
+    .technique__photo {
+      display: flex;
+      justify-content: center;
+      height: 200px;
+      margin: 0 auto;
+    }
+  }
+
+  .loader {
+    width: 100px;
+    height: 100px;
+    border: 5px solid #fff;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    background-color: black;
+    margin: 0 auto;
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .model {
+    display: inline-flex;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+
+    .model__photo {
+      margin: 20px;
+      padding: 0 10px;
+      height: 60vh;
+      @media (max-width: 1024px) {
+        height: 50vh;
+      }
+      @media (max-width: 425px) {
+        height: 30vh;
+      }
+    }
+
+    .model__info {
+      padding: 20px;
+    }
+  }
+
+  .login {
+    height: 91.5vh;
+    justify-content: center;
+    overflow: hidden;
+    .login__text {
+      width: 300px;
+      font-family: Arial, sans-serif;
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .login__box {
+      width: 400px;
+      background-color: lightblue;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .login__button {
+      width: 250px;
+    }
+  }
+  .payment {
+    .payment__card {
+      margin: 20px 0;
+
+      @media (max-width: 768px) {
+        
+      }
+    }
+    .payment__inputs {
+      .payment__inputs-input {
+        margin: 20px 0;
+        display: block;
+      }
+    }
+  }
+}
