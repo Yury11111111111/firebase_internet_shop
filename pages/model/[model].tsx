@@ -42,15 +42,15 @@ const ModelPage = () => {
     return <Loader />;
   }
 
+  const ModelPhoto = {
+    src: modelData?.photo.stringValue,
+  };
+
   return (
     <>
       <NavBar back={true} />
       <div className="model">
-        <Box
-          component="img"
-          src={modelData?.photo.stringValue}
-          className="model__photo"
-        />
+        <Box component="img" {...ModelPhoto} className="model__photo" />
         <Typography variant="h6" gutterBottom className="model__info">
           {modelData?.type?.stringValue == "laptop" ? (
             <>
