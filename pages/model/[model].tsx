@@ -8,6 +8,7 @@ import NavBar from "@/components/NavBar";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Model } from "../../types/types";
 import Link from "next/link";
+import Image from "next/image";
 
 const ModelPage = () => {
   const router = useRouter();
@@ -50,7 +51,12 @@ const ModelPage = () => {
     <>
       <NavBar back={true} />
       <div className="model">
-        <Box component="img" {...ModelPhoto} className="model__photo" />
+        {/* <Box component="img" {...ModelPhoto} className="model__photo" /> */}
+        <img
+          src={modelData?.photo.stringValue}
+          alt="Model photo"
+          className="model__photo"
+        />
         <Typography variant="h6" gutterBottom className="model__info">
           {modelData?.type?.stringValue == "laptop" ? (
             <>
